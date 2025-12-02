@@ -2,6 +2,8 @@
 
 NestJS Monorepo 项目管理工具，提供开发、构建和 PM2 进程管理功能。
 
+详细设计文档参考：[feature-monorepo-cli.md](./docs/feature-monorepo-cli.md)
+
 ## 安装
 
 ```bash
