@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/svc-api/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/svc-api/tsconfig.app.json"
+  },
+  "projects": {
+    "svc-api": {
+      "type": "application",
+      "root": "apps/svc-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/svc-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/svc-api/tsconfig.app.json"
+      }
+    },
+    "svc-test": {
+      "type": "application",
+      "root": "apps/svc-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/svc-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/svc-test/tsconfig.app.json"
+      }
+    },
+    "test": {
+      "type": "library",
+      "root": "libs/test",
+      "entryFile": "index",
+      "sourceRoot": "libs/test/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/test/tsconfig.lib.json"
+      }
+    }
+  },
+  "monorepo": true,
+  "root": "apps/svc-api"
+}

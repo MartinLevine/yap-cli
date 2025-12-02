@@ -1,0 +1,14 @@
+{
+  "semi": false,
+  "printWidth": 120,
+  "trailingComma": "none",
+  "tabWidth": 4,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "plugins": [
+    "prettier-plugin-organize-imports"
+  ]
+}
