@@ -1,0 +1,50 @@
+{
+  "name": "yap-cli",
+  "version": "0.1.0",
+  "description": "A CLI tool for managing NestJS monorepo projects",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "yap": "bin/yap.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "pkg": "pkg . --out-path binaries"
+  },
+  "keywords": [
+    "nestjs",
+    "monorepo",
+    "cli",
+    "pm2"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@swc-node/register": "^1.11.1",
+    "@swc/core": "^1.15.3",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "ora": "^8.1.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node20-macos-x64",
+      "node20-macos-arm64",
+      "node20-linux-x64",
+      "node20-win-x64"
+    ],
+    "outputPath": "binaries"
+  }
+}
